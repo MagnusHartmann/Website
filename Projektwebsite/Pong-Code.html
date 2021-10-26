@@ -1,0 +1,138 @@
+<title>Pong Videospiel</title>
+<body leftmargin=50 topmargin=30>
+<h1>Pong Videospiel</h1>
+<p> Hierauf folgt der gesamte Python code für das Pong Videospiel viel Spaß damit!
+<br>Einfach kopieren und einfügen. Der Code ist in Python 3.10 geschrieben, funktioniert aber in allen darauffolgenden Versionen. (=
+<br> Mit Sicherheit ist dir schon aufgefallen das "afplay bounce.wav&" Probleme macht. Das ist eine Sounddatei, also wenn du in deiner IDE 
+<br>eine Sounddatei mit dem Namen "afplay bounce.wav&" hinterlegst gibt es beim abprall Sound. (;</p><br>
+<a href="Projektwebsite.html">zurück zur Startseite</a>
+
+
+
+<p>
+import turtle<br>
+import os<br>
+<br>
+wn = turtle.Screen()<br>
+wn.title("Pong")<br>
+wn.bgcolor("black")<br>
+wn.setup(width=800, height=600)<br>
+wn.tracer(0)<br>
+<br>
+# Score<br>
+score_a = 0<br>
+score_b = 0<br>
+<br>
+# Paddle A<br>
+paddle_a = turtle.Turtle()<br>
+paddle_a.speed(0)<br>
+paddle_a.shape("square")<br>
+paddle_a.color("white")<br>
+paddle_a.shapesize(stretch_wid=5,stretch_len=1)<br>
+paddle_a.penup()<br>
+paddle_a.goto(-350, 0)<br>
+<br>
+# Paddle B<br>
+paddle_b = turtle.Turtle()<br>
+paddle_b.speed(0)<br>
+paddle_b.shape("square")<br>
+paddle_b.color("white")<br>
+paddle_b.shapesize(stretch_wid=5,stretch_len=1)<br>
+paddle_b.penup()<br>
+paddle_b.goto(350, 0)<br>
+<br>
+# Ball<br>
+ball = turtle.Turtle()<br>
+ball.speed(0)<br>
+ball.shape("square")<br>
+ball.color("white")<br>
+ball.penup()<br>
+ball.goto(0, 0)<br>
+ball.dx = 0.2<br>
+ball.dy = 0.2<br>
+<br>
+# Pen<br>
+pen = turtle.Turtle()<br>
+pen.speed(0)<br>
+pen.shape("square")<br>
+pen.color("white")<br>
+pen.penup()<br>
+pen.hideturtle()<br>
+pen.goto(0, 260)<br>
+pen.write("Player A: 0  Player B: 0", align="center", font=("Courier", 24, "normal"))<br>
+<br>
+# Functions<br>
+def paddle_a_up():<br>
+    y = paddle_a.ycor()<br>
+    y += 20<br>
+    paddle_a.sety(y)<br>
+<br>
+def paddle_a_down():<br>
+    y = paddle_a.ycor()<br>
+    y -= 20<br>
+    paddle_a.sety(y)<br>
+<br>
+def paddle_b_up():<br>
+    y = paddle_b.ycor()<br>
+    y += 20<br>
+    paddle_b.sety(y)<br>
+<br>
+def paddle_b_down():<br>
+    y = paddle_b.ycor()<br>
+    y -= 20<br>
+    paddle_b.sety(y)<br>
+<br>
+# Keyboard bindings<br>
+wn.listen()<br>
+wn.onkeypress(paddle_a_up, "w")<br>
+wn.onkeypress(paddle_a_down, "s")<br>
+wn.onkeypress(paddle_b_up, "Up")<br>
+wn.onkeypress(paddle_b_down, "Down")<br>
+<br>
+# Main game loop<br>
+while True:<br>
+    wn.update()<br>
+    <br>
+    # Move the ball<br>
+    ball.setx(ball.xcor() + ball.dx)<br>
+    ball.sety(ball.ycor() + ball.dy)<br>
+<br>
+    # Border checking<br>
+<br>
+    # Top and bottom<br>
+    if ball.ycor() > 290:<br>
+        ball.sety(290)<br>
+        ball.dy *= -1<br>
+        os.system("afplay bounce.wav&")<br>
+    <br>
+    elif ball.ycor() < -290:<br>
+        ball.sety(-290)<br>
+        ball.dy *= -1<br>
+        os.system("afplay bounce.wav&")<br>
+<br>
+    # Left and right<br>
+    if ball.xcor() > 350:<br>
+        score_a += 1<br>
+        pen.clear()<br>
+        pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))<br>
+        ball.goto(0, 0)<br>
+        ball.dx *= -1<br>
+<br>
+    elif ball.xcor() < -350:<br>
+        score_b += 1<br>
+        pen.clear()<br>
+        pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))<br>
+        ball.goto(0, 0)<br>
+        ball.dx *= -1<br>
+<br>
+    # Paddle and ball collisions<br>
+    if ball.xcor() < -340 and ball.ycor() < paddle_a.ycor() + 50 and ball.ycor() > paddle_a.ycor() - 50:<br>
+        ball.dx *= -1 <br>
+        os.system("afplay bounce.wav&")<br>
+    <br>
+    elif ball.xcor() > 340 and ball.ycor() < paddle_b.ycor() + 50 and ball.ycor() > paddle_b.ycor() - 50:<br>
+        ball.dx *= -1<br>
+        os.system("afplay bounce.wav&")</p><br>
+<br>
+<a href="Projektwebsite.html">zurück zur Startseite</a>
+</body>
