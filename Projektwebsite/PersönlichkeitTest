@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Persönlichkeitstest</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+       
+    </head>
+<body leftmargin="50" topmargin="30">
+
+    <h1>PersönlichkeitsTest</h1>
+    <ol>
+        <li><a href="#beschreibung">Beschreibung</a></li>
+        <li><a href="#funktionen">Funktionen</a></li>
+        <li><a href="#herunterladen">Herunterladen</a></li>
+    </ol>
+    <div id="beschreibung">
+        <h2 >Beschreibung</h2>
+        <p>Der PersönlichkeitsTest findet mit 115 Fragen heraus wer du wirklich bist.<br>Das ist nicht nur nützlich für dich selbst, um dich besser verstehen zu können und um damit dudeine schwächen minimieren und deine stärken ausbauen kannst.<br>Der Persönlichkeitstest wird dir Fragen stellen, die auf einen oder mehrere der 9 möglichen Persönlichkeit Typen bezogen ist. So wirst du am Ende ein sehr genaues Ergebnis erhalten und sicher auch ein bisschen erschrocken über die Genauigkeit sein. <br> Mit dem erwerb der Software des Persönlichkeitstest eröffnen sich folgende Möglichkeiten:</p>
+        <ul>
+            <li>Teste selber welcher Persönlichkeit Typ du bist!</li>
+            <li>Lasse deine Freunde den Test machen, wie sie dich einschätzen. Und analysiere die Unterschiede</li>
+            <li>Benutze die Software um bei Bewerbungsgesprächen herauszufinden, ob der Bewerber zu deiner Firma passt</li>
+            <li>Habe Spaß und probier ein wenig rum. z.B immer das Gegenteil antworten oder anderes</li>
+        </ul>
+    </div>
+    <div id="funktionen">
+        <h2>Funktionen</h2>
+        <h3>So sieht er aus</h3>
+        <p><br></p>
+        <img src="bilder/hoffentlioch wirklich letzte Gui.png" class="kasten"></img>
+        <p><br></p>
+        <table class="content-table">
+        <thead>
+            <tr>
+                <td>Funktion</td>
+                <td>Layout</td>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Frage anzeigen Label</td>
+                <td>Zeigt dir die jeweils zu beantwortende Frage an. Die Nummer an Anfang zeigt an, bei welcher Frage du dich gerade befindest</td>
+            </tr>
+            <tr>
+                <td>"Weiter" Button</td>
+                <td>Speichert deine Antwort, die du mit dem Schieberegler eingestellt hast und leitet dich zur nächsten Frage</td>
+            </tr>
+            <tr>
+                <td>"Zurück" Button</td>
+                <td>setzt deine Vorherige Antwort zurück und zeigt dir die vorherige Frage wieder an, um deine Antwort zu korrigieren. Du kannst beliebig zurückgehen. Es gibt keine einschränkungen</td>
+            </tr>
+            <tr>
+                <td>Schieberegeler</td>
+                <td>Gib deine Antwort von 0 - 6 an. 0 steht dabei für "trifft garnicht zu" und 6 für "trifft voll und ganz zu" Die zahlen dazwischen stehen für die Zwischenstufen. Versuche bitte für das Bestmögliche Ergebnis möglichst seltden die 3 Auszuwählen! </td>
+            </tr>
+            <tr>
+                <td>Ladebalken</td>
+                <td>Zeigt dir deinen Vortschritt an</td>
+            </tr>
+        </tbody>
+        </table>
+        <p><br></p>
+        <h3>Ergebnisse Anzeigen</h3>
+        <p><br></p>
+        <img src="./bilder/hoffentlich letzte Ergebnis gui.png" class="kasten"></div></img>
+        <p><br></p>
+        <table class="content-table">
+        <thead>
+            <tr>
+                <th>Layout</th>
+                <th>Funktion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ergenis Anzeigen Label</td>
+                <td>Zeigt dir die Werte für jeden der 9 Persönlichkeit Typen an und gibt dir unten den Persönlichkeit Typ mit der Höchsten Übereinstimmung an. Also deine Persönlichkeit   </td>
+            </tr>
+            <tr>
+                <td>"Typen anzeigen" Button</td>
+                <td>Öffnet die Pdf mit den Persönlichkeit Typen, damit du dir durchlesen Kannst wie du Tickst</td>
+            </tr>
+        </tbody>
+        </table>
+        
+    </div >
+    <div id="herunterladen">
+        <h2>Herunterladen</h2>
+        <p>Wenn ihr interrseiert seid könnt ihr euch den PersönlichkeitsTest <strong>Gratis</strong> <a href="https://github.com/joshua1904/persoenlichkeit_Test">Herunterladen</a><br> Ladet euch dafür einfach das Projekt herunter und öpffnet es in eurer Python IDE (z.b Pycharm)</p>
+
+    </div>
+</body>
+
+</html>
